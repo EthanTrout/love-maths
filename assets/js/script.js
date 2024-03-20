@@ -37,7 +37,7 @@ function runGame(gameType){
         displayMultiplyQuestion(num1,num2)
     }
     else if(gameType === "division"){
-        displayDivideQuestion(num1,num2)
+        displayDivideQuestion(num1*num2,num2)
     }
     else{
         alert(`Unkown game type ${gameType}`)
