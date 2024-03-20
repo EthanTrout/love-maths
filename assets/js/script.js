@@ -40,9 +40,11 @@ function checkAnswer(){
     
     if(isCorrect){
         alert("hey you got it right")
+        incrementScore()
     }
     else{
         alert("You are pretty thick")
+        incrementWrongAnswer()
     }
     runGame(calculatedAnswer[1])
 }
@@ -64,4 +66,14 @@ function calculateCorrectAnswer(){
     else if(operator === "%"){
         return [operand1 % operand2,"divide"];
     }
+}
+
+function incrementScore(){
+    let oldScore = parseInt(document.getElementById("score").innerText)
+    document.getElementById("score").innerText = ++oldScore;
+}
+
+function incrementWrongAnswer(){
+    let oldScore = parseInt(document.getElementById("incorrect").innerText)
+    document.getElementById("incorrect").innerText = ++oldScore;
 }
